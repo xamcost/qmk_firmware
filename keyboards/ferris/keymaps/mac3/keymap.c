@@ -32,22 +32,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;             // Return true for normal processing of tap keycode
         case KCC_COPY:
             if (!record->tap.count && record->event.pressed) {
-                tap_code16(G(KC_C)); // Intercept hold function to send CMD-C
+                tap_code16(G(KC_C));
                 return false;
             }
-            return true;             // Return true for normal processing of tap keycode
+            return true;
         case KCV_PASTE:
             if (!record->tap.count && record->event.pressed) {
-                tap_code16(G(KC_V)); // Intercept hold function to send CMD-V
+                tap_code16(G(KC_V));
                 return false;
             }
-            return true;             // Return true for normal processing of tap keycode
+            return true;
         case KC_BACKTAB:
             if (record->event.pressed) {
-                tap_code16(S(KC_TAB)); // Intercept hold function to send CMD-V
+                tap_code16(S(KC_TAB));
                 return false;
             }
-            break;             // Return true for normal processing of tap keycode
+            break;
     }
     return true;
 }
