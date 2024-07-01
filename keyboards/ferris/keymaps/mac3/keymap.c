@@ -75,7 +75,7 @@ combo_t key_combos[] = {
   [CAPS_UI] = COMBO(caps_ui_combo, KC_CAPS),
   [ESC_JK] = COMBO(escr_combo, KC_ESC),
   [BTAB_CV] = COMBO(btab_combo, KC_BACKTAB),
-  [ESC_DF] = COMBO(escl_combo, KC_BSPC),
+  [ESC_DF] = COMBO(escl_combo, KC_ESC),
   [ENT_THUMBS] = COMBO(enter_combo, KC_ENT),
   [TAB_ER] = COMBO(tab_combo, KC_TAB),
 };
