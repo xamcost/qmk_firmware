@@ -57,7 +57,7 @@ enum myCombos {
     CAPS_UI,
     ESC_JK,
     BTAB_CV,
-    BSPC_DF,
+    ESC_DF,
     ENT_THUMBS,
     TAB_ER,
     COMBO_LENGTH
@@ -65,17 +65,17 @@ enum myCombos {
 uint16_t COMBO_LEN = COMBO_LENGTH;
 
 const uint16_t PROGMEM caps_ui_combo[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM esc_combo[] = {HO_J, HO_K, COMBO_END};
+const uint16_t PROGMEM escr_combo[] = {HO_J, HO_K, COMBO_END};
 const uint16_t PROGMEM btab_combo[] = {KCC_COPY, KCV_PASTE, COMBO_END};
-const uint16_t PROGMEM bspc_combo[] = {HO_D, HO_F, COMBO_END};
+const uint16_t PROGMEM escl_combo[] = {HO_D, HO_F, COMBO_END};
 const uint16_t PROGMEM enter_combo[] = {KC_BSPC, KC_SPC, COMBO_END};
 const uint16_t PROGMEM tab_combo[] = {KC_E, KC_R, COMBO_END};
 
 combo_t key_combos[] = {
   [CAPS_UI] = COMBO(caps_ui_combo, KC_CAPS),
-  [ESC_JK] = COMBO(esc_combo, KC_ESC),
+  [ESC_JK] = COMBO(escr_combo, KC_ESC),
   [BTAB_CV] = COMBO(btab_combo, KC_BACKTAB),
-  [BSPC_DF] = COMBO(bspc_combo, KC_BSPC),
+  [ESC_DF] = COMBO(escl_combo, KC_BSPC),
   [ENT_THUMBS] = COMBO(enter_combo, KC_ENT),
   [TAB_ER] = COMBO(tab_combo, KC_TAB),
 };
