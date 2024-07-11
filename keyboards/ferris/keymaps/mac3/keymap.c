@@ -93,21 +93,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
     [1] = LAYOUT_split_3x5_2(
   //,----------------------------------------------.        ,-------------------------------------------.
-      KC_GRV,   KC_LBRC,  KC_RBRC,  KC_DLR,  KC_ESC,        KC_CIRC, KC_7,    KC_8,     KC_9,    KC_EQL,
+      KC_GRV,   KC_RCBR,  KC_RPRN, KC_RBRC,   KC_GT,        KC_DQUO, KC_7,    KC_8,     KC_9,    KC_PLUS,
   //|----------------------------------------------|        |-------------------------------------------|
-      KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_BSPC,       KC_MINS, KC_4,    KC_5,     KC_6,    KC_QUOT,
+      KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_UNDS,        KC_QUOT, KC_4,    KC_5,     KC_6,    KC_EQL,
   //|----------------------------------------------|        |-------------------------------------------|
-      KC_TILD,  KC_LPRN,  KC_RPRN,  KC_UNDS, KC_TAB,        KC_0,  KC_1,    KC_2,     KC_3,    KC_BSLS,
+      KC_TILD,  KC_LCBR,  KC_LPRN, KC_LBRC,   KC_LT,          KC_0,  KC_1,    KC_2,     KC_3,    KC_MINS,
   //|----------------------------------------------|        |-------------------------------------------|
-                                   KC_TRNS, KC_TRNS,        KC_TRNS,  KC_TRNS
+                                   MO(3),    KC_BSPC,        KC_SPC,  MO(1)
   ),
     [2] = LAYOUT_split_3x5_2(
   //,----------------------------------------------.        ,-------------------------------------------.
+      KC_EXLM,    KC_AT,  KC_HASH,  KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR,  KC_TILD, KC_PIPE,
+  //|----------------------------------------------|        |-------------------------------------------|
+      KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_BTN1,       KC_LEFT, KC_DOWN,   KC_UP,  KC_RGHT, KC_COLN,
+  //|----------------------------------------------|        |-------------------------------------------|
+      KC_WH_L,  KC_WH_D, KC_WH_U,  KC_WH_R,  KC_BTN2,       KC_MS_L, KC_MS_D, KC_MS_U,  KC_MS_R, KC_BSLS,
+  //|----------------------------------------------|        |-------------------------------------------|
+                                   KC_TRNS, KC_TRNS,        KC_TRNS,  KC_TRNS
+  ),
+    [3] = LAYOUT_split_3x5_2
+  //,----------------------------------------------.        ,-------------------------------------------.
       KC_F1,    KC_F2,    KC_F3,    KC_F4,   KC_F5,         KC_F6,   KC_F7,   KC_F8,    KC_F9,   KC_F10,
   //|----------------------------------------------|        |-------------------------------------------|
-      KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_BSPC,       KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT, KC_F11,
+      KC_MRWD,  KC_MPRV,  KC_MPLY,  KC_MNXT, KC_MFFD,       KC_EJCT, KC_VOLD, KC_VOLU,  KC_MUTE, KC_F11,
   //|----------------------------------------------|        |-------------------------------------------|
-      KC_BRID,  KC_BRIU,  KC_MRWD,  KC_MPLY, KC_MFFD,       KC_EJCT, KC_VOLD, KC_VOLU,  KC_MUTE, KC_F12,
+      QK_BOOT,  QK_RBT,   KC_WAKE,  KC_SLEP,  KC_PWR,       KC_MCTL, KC_BRID, KC_BRIU,  KC_LPAD, KC_F12,
   //|----------------------------------------------|        |-------------------------------------------|
                                    KC_TRNS, KC_TRNS,        KC_TRNS,  KC_TRNS
   ),
