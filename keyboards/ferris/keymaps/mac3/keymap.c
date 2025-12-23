@@ -18,7 +18,11 @@
 #define KCV_PASTE LT(0,KC_V)
 
 enum custom_keycodes {
-   KC_BACKTAB
+   KC_BACKTAB,
+   KC_GR,
+   KC_SHARP,
+   KC_CFLEX,
+   KC_TREMA
 };
 
 // macros
@@ -45,6 +49,30 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_BACKTAB:
             if (record->event.pressed) {
                 tap_code16(S(KC_TAB));
+                return false;
+            }
+            break;
+        case KC_GR:
+            if (record->event.pressed) {
+                tap_code16(RALT(KC_GRAVE));
+                return false;
+            }
+            break;
+        case KC_SHARP:
+            if (record->event.pressed) {
+                tap_code16(A(KC_E));
+                return false;
+            }
+            break;
+        case KC_CFLEX:
+            if (record->event.pressed) {
+                tap_code16(A(KC_I));
+                return false;
+            }
+            break;
+        case KC_TREMA:
+            if (record->event.pressed) {
+                tap_code16(A(KC_U));
                 return false;
             }
             break;
@@ -103,11 +131,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
     [2] = LAYOUT_split_3x5_2(
   //,----------------------------------------------.        ,-------------------------------------------.
-      KC_EXLM,    KC_AT,  KC_HASH,  KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR,  KC_TILD, KC_BTN1,
+      KC_EXLM,    KC_AT,  KC_HASH,  KC_DLR,  KC_PERC,       KC_CIRC, KC_AMPR, KC_ASTR,  KC_TILD, MS_BTN1,
   //|----------------------------------------------|        |-------------------------------------------|
       KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_QUOT,       KC_LEFT, KC_DOWN,   KC_UP,  KC_RGHT, KC_COLN,
   //|----------------------------------------------|        |-------------------------------------------|
-      KC_WH_L,  KC_WH_D, KC_WH_U,  KC_WH_R,  KC_DQUO,       KC_MS_L, KC_MS_D, KC_MS_U,  KC_MS_R, KC_BTN2,
+      KC_TREMA, KC_CFLEX, KC_SHARP, KC_GR,   KC_DQUO,       MS_LEFT, MS_DOWN,   MS_UP,  MS_RGHT, MS_BTN2,
   //|----------------------------------------------|        |-------------------------------------------|
                                    KC_TRNS, KC_TRNS,        KC_TRNS,  KC_TRNS
   ),
